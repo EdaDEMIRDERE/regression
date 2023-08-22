@@ -14,3 +14,9 @@ test_df = pd.read_csv("test.csv")
 print(test_df.head())
 test_row, test_col = test_df.shape
 print(f"\nThere are {train_row} rows and {train_col} columns in test dataframe")
+
+# .values.reshape(-1, 1), bu değerleri bir sütun vektörüne dönüştürür.
+X_train = train_df["x"].values.reshape(-1, 1)
+y_train = train_df["y"].values.reshape(-1, 1)
+x_test = train_df["x"].values.reshape(-1, 1)
+y_test = train_df["y"].values.reshape(-1, 1)
