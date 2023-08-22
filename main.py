@@ -32,3 +32,8 @@ reg.fit(X_train, y_train)
 y_predictions = reg.predict(x_test)
 mse = mean_squared_error(y_test, y_predictions)
 print(f"The result of MSE is: {mse}")
+
+# Plot the result
+plt.scatter(X_train, y_train, color="blue")
+plt.plot(x_test, y_predictions, color="black")
+plt.show()
